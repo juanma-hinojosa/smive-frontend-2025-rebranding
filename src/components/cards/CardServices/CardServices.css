@@ -1,0 +1,44 @@
+.card-services {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #677384;
+  padding: 20px;
+  color: white;
+  transition: 0.5s; 
+}
+
+.card-services .card-services-img {
+  width: 100px;
+}
+
+.card-services .card-services-content {
+  margin-left: 20px;
+}
+
+.card-services .card-services-content .card-services-title {
+  margin-bottom: 10px;
+}
+
+.card-services:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .card-services {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-services .card-services-img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .card-services .card-services-content {
+    margin-left: 0;
+  }
+  
+}
