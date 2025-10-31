@@ -1,4 +1,4 @@
-import { imagesClientesLogo, imagesProvedoresElectricidad, imagesProvedoresPintura, } from "../../assets/js/array-img"
+import { imagesClientesLogo, imagesProvedoresConstruccion, imagesProvedoresElectricidad, imagesProvedoresHerramientas, imagesProvedoresPintura, imagesProvedoresPlomeria, } from "../../assets/js/array-img"
 import ButtonBgComponent from "../../components/buttons/button-bg/buttonComponent"
 import CardProjectComponent from "../../components/cards/CardProjects/CardProject"
 import CardServicesComponent from "../../components/cards/CardServices/CardServicesComponet"
@@ -8,14 +8,12 @@ import HeroComponent from "../../components/Hero/HeroComponent"
 import MarqueeComponent from "../../components/marquee/MarqueComponent"
 import SectionReview from "../../components/SectionReviews/SectionReview"
 import "./home.css"
-import Marquee from "react-fast-marquee";
 
 function HomePage() {
   return (
     <>
       <main style={{ backgroundColor: "#f9f9f9" }} >
         <HeroComponent />
-
 
         {/* section estadisticas  */}
         <EstadisticasSection />
@@ -54,7 +52,9 @@ function HomePage() {
             />
           </div>
 
-          <ButtonBgComponent to="/services">Ver productos</ButtonBgComponent>
+          <ButtonBgComponent to="/services">
+            Servicios
+          </ButtonBgComponent>
         </section>
 
         {/* SECCION PROYECTOS  */}
@@ -71,43 +71,57 @@ function HomePage() {
             <CardProjectComponent />
           </div>
 
-          <ButtonBgComponent to="/projects">Ver mas</ButtonBgComponent>
+          <ButtonBgComponent to="/projects">Proyectos</ButtonBgComponent>
 
         </section>
 
         {/* SECCION MARQUEE */}
-        <MarqueeComponent
-          images={imagesClientesLogo}
-          speed={100}
-          gradient={false}
-          direction="right"
-          autoFill={true}
+        <section className="bg-white py-[50px] px-[20px]">
+          <MarqueeComponent
+            images={imagesClientesLogo}
+            speed={100}
+            gradient={true}
+            gradientWidth={100}
+            direction="right"
+            autoFill={true}
+          />
+        </section>
 
-        />
 
         {/* SECCION REVIEWS  */}
         <SectionReview />
 
         {/* SECCION MARQUEE */}
-        <MarqueeComponent
-          images={imagesProvedoresPintura}
-          speed={50}
-          gradient={true}
-          gradientColor={[248,251,253]}
-          gradientWidth={200}
-          direction="right"
-          autoFill={true}
-        />
+        <section className="bg-white py-[50px] px-[20px]">
+          <MarqueeComponent
+            images={imagesProvedoresPintura}
+            speed={50}
+            gradient={true}
+            // gradientColor={[248, 251, 253]}
+            gradientWidth={100}
+            direction="left"
+            autoFill={true}
+          />
 
-        <MarqueeComponent
-          images={imagesProvedoresElectricidad}
-          speed={80}
-          gradient={true}
-          gradientColor={[248,251,253]}
-          gradientWidth={200}
-          direction="right"
-          autoFill={true}
-        />
+          <MarqueeComponent
+            images={imagesProvedoresElectricidad}
+            speed={80}
+            gradient={true}
+            gradientWidth={100}
+            direction="left"
+            autoFill={true}
+          />
+
+          <MarqueeComponent
+            images={imagesProvedoresHerramientas}
+            speed={70}
+            gradient={true}
+            // gradientColor={[248, 251, 253]}
+            gradientWidth={100}
+            direction="left"
+            autoFill={true}
+          />
+        </section>
 
 
       </main>

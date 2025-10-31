@@ -15,9 +15,9 @@ function HeroComponent() {
           </p>
 
           <div className="hero-buttons">
-            <ButtonBorderComponent to="/contacto">Contactanos</ButtonBorderComponent>
+            <ButtonBorderComponent to="/contat">Contactanos</ButtonBorderComponent>
 
-            <ButtonBgComponent to="/productos">Ver productos</ButtonBgComponent>
+            <ButtonBgComponent to="/projects">Proyectos</ButtonBgComponent>
           </div>
         </div>
       </div>

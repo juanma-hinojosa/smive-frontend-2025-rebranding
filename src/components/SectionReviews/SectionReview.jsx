@@ -1,14 +1,21 @@
+import CardReviewComponent from "../cards/CardReview/cardReviewComponent"
 import TitleSectionComponent from "../HeaderSection/TitleSection"
 import "./SectionReview.css"
 
 function SectionReview() {
-  return(
+  return (
     <section className="review-section">
       <div className="section-maxwidth">
-        <TitleSectionComponent 
+        <TitleSectionComponent
           title="Lo que dicen nuestros clientes"
           subtexto="En Smive Refacciones, nos enorgullece ofrecer a nuestros clientes una experiencia de compra excepcional. Aquí te presentamos algunas razones por las que somos la elección preferida para tus necesidades de refacciones automotrices:"
         />
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <CardReviewComponent />
+          <CardReviewComponent />
+          <CardReviewComponent />
+        </div>
       </div>
     </section>
   )
